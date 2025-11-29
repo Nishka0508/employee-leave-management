@@ -1,85 +1,76 @@
-Leave Management System (MERN Stack)
+# 🚀 Leave Management System (MERN Stack)
 
-A full-stack Leave Management System built using MongoDB, Express, React, and Node.js (MERN).
-It allows employees to apply for leave and managers to review, approve, or reject requests through an intuitive dashboard.
+A production-ready **Leave Management System** built using the **MERN stack**.  
+Employees can apply for leave, check status, while managers can approve/reject requests with a clear dashboard.
 
-🚀 Features
-👤 Employee
+---
 
-Apply for leave
+## 📌 Features
 
-View leave request status (Pending / Approved / Rejected)
+### 👤 Employee
+- Apply for leave
+- View all submitted leave requests
+- Track status: **Pending / Approved / Rejected**
 
-👨‍💼 Manager
+### 👨‍💼 Manager
+- View all employee leave requests
+- Approve or reject requests
+- Dashboard statistics:
+  - ✔ Approved requests  
+  - ✖ Rejected requests  
+  - ⏳ Pending requests  
 
-View all employee leave requests
+### 🔐 Authentication & Authorization
+- JWT-based login & registration
+- Password hashing using bcrypt
+- Role-based access (Employee / Manager)
 
-Approve / Reject requests
+---
 
-Dashboard showing:
+## 🛠 Tech Stack
 
-✔ Accepted leaves
+### **Frontend**
+- React (Vite)
+- Axios
+- React Router DOM
+- Tailwind CSS / Custom CSS
 
-✖ Rejected leaves
+### **Backend**
+- Node.js  
+- Express.js  
+- MongoDB + Mongoose  
+- JWT Authentication  
+- dotenv  
 
-⏳ Pending leaves
-
-🔐 Authentication
-
-Register / Login
-
-JWT-based secure authentication
-
-Role-based access control (Employee / Manager)
-
-🛠 Tech Stack
-Frontend
-
-React (Vite)
-
-Axios
-
-React Router
-
-Tailwind CSS / Custom CSS
-
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB + Mongoose
-
-JWT Authentication
-
-Bcrypt Password Hashing
-
-dotenv
-
-📁 Project Structure
+---
 leave-management/
 │
 ├── backend/
-│   ├── models/
-│   ├── routes/
-│   ├── controllers/
-│   ├── config/
-│   ├── server.js
-│   └── .env
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ ├── config/
+│ ├── server.js
+│ └── .env
 │
 └── frontend/
-    ├── src/
-    │   ├── components/
-    │   ├── pages/
-    │   ├── api/
-    │   ├── App.jsx
-    │   └── main.jsx
-    └── vite.config.js
+├── src/
+│ ├── api/
+│ ├── components/
+│ ├── pages/
+│ ├── App.jsx
+│ └── main.jsx
+└── vite.config.js
 
-⚙️ Setup Instructions
-1. Clone the repo
-git clone https://github.com/yourusername/leave-management.git
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/leave-management.git
 cd leave-management
 
 🖥 Backend Setup
@@ -89,12 +80,12 @@ npm install
 
 Create a .env file:
 
-MONGO_URI=your_mongo_connection_string
+MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 PORT=5000
 
 
-Run backend:
+Run backend server:
 
 npm start
 
@@ -103,47 +94,51 @@ cd frontend
 npm install
 npm run dev
 
-🔗 API Endpoints
-Auth
+📡 API Endpoints
+🔑 Authentication
+Method	Endpoint	Description
+POST	/api/auth/register	Register user
+POST	/api/auth/login	Login user
+📝 Leave Management
+Method	Endpoint	Description
+POST	/api/leave/apply	Apply for leave
+GET	/api/leave/myrequests	Employee leave history
+GET	/api/leave/all Manager	View all requests
+PUT	/api/leave/update/:id	Approve / Reject request
+📊 Manager Dashboard Overview
 
-POST /api/auth/register
+Total pending requests
 
-POST /api/auth/login
+Total approved requests
 
-Leaves
+Total rejected requests
 
-POST /api/leave/apply
+Table of all leave applications
 
-GET /api/leave/myrequests
+🚀 Deployment Guide
+Frontend
 
-GET /api/leave/all (Manager)
+Vercel
 
-PUT /api/leave/update/:id (Approve/Reject)
+Netlify
 
-📊 Manager Dashboard
+Backend
 
-Displays:
+Render
 
-✔ Accepted Requests
+Railway
 
-✖ Rejected Requests
+Database
 
-⏳ Pending Requests
-
-🚀 Deployment
-
-Can be deployed using:
-
-Frontend → Vercel / Netlify
-
-Backend → Render / Railway
-
-Database → MongoDB Atlas
+MongoDB Atlas
 
 🤝 Contributing
 
-Feel free to fork the project and create pull requests.
+Contributions, issues, and feature requests are welcome!
+Feel free to submit a pull request.
 
-📜 License
+📄 License
 
-This project is for educational and personal use.
+This project is created for educational and personal use.
+## 📁 Project Structure
+
