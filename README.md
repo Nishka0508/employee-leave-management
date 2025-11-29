@@ -1,16 +1,149 @@
-# React + Vite
+Leave Management System (MERN Stack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Leave Management System built using MongoDB, Express, React, and Node.js (MERN).
+It allows employees to apply for leave and managers to review, approve, or reject requests through an intuitive dashboard.
 
-Currently, two official plugins are available:
+🚀 Features
+👤 Employee
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Apply for leave
 
-## React Compiler
+View leave request status (Pending / Approved / Rejected)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+👨‍💼 Manager
 
-## Expanding the ESLint configuration
+View all employee leave requests
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Approve / Reject requests
+
+Dashboard showing:
+
+✔ Accepted leaves
+
+✖ Rejected leaves
+
+⏳ Pending leaves
+
+🔐 Authentication
+
+Register / Login
+
+JWT-based secure authentication
+
+Role-based access control (Employee / Manager)
+
+🛠 Tech Stack
+Frontend
+
+React (Vite)
+
+Axios
+
+React Router
+
+Tailwind CSS / Custom CSS
+
+Backend
+
+Node.js
+
+Express.js
+
+MongoDB + Mongoose
+
+JWT Authentication
+
+Bcrypt Password Hashing
+
+dotenv
+
+📁 Project Structure
+leave-management/
+│
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── controllers/
+│   ├── config/
+│   ├── server.js
+│   └── .env
+│
+└── frontend/
+    ├── src/
+    │   ├── components/
+    │   ├── pages/
+    │   ├── api/
+    │   ├── App.jsx
+    │   └── main.jsx
+    └── vite.config.js
+
+⚙️ Setup Instructions
+1. Clone the repo
+git clone https://github.com/yourusername/leave-management.git
+cd leave-management
+
+🖥 Backend Setup
+cd backend
+npm install
+
+
+Create a .env file:
+
+MONGO_URI=your_mongo_connection_string
+JWT_SECRET=your_secret_key
+PORT=5000
+
+
+Run backend:
+
+npm start
+
+🌐 Frontend Setup
+cd frontend
+npm install
+npm run dev
+
+🔗 API Endpoints
+Auth
+
+POST /api/auth/register
+
+POST /api/auth/login
+
+Leaves
+
+POST /api/leave/apply
+
+GET /api/leave/myrequests
+
+GET /api/leave/all (Manager)
+
+PUT /api/leave/update/:id (Approve/Reject)
+
+📊 Manager Dashboard
+
+Displays:
+
+✔ Accepted Requests
+
+✖ Rejected Requests
+
+⏳ Pending Requests
+
+🚀 Deployment
+
+Can be deployed using:
+
+Frontend → Vercel / Netlify
+
+Backend → Render / Railway
+
+Database → MongoDB Atlas
+
+🤝 Contributing
+
+Feel free to fork the project and create pull requests.
+
+📜 License
+
+This project is for educational and personal use.
